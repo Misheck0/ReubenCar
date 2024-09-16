@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step to setup PHP environment
-    - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+    # Step to setup PHP environment (use latest version of the action)
+    - uses: shivammathur/setup-php@v2
       with:
         php-version: '8.0'
     
