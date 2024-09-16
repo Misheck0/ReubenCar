@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true # Allow use of Node.js 16 temporarily
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true # Force GitHub Actions to use Node.js 20
 
     steps:
     # Step to setup PHP environment (latest version of the action)
@@ -27,7 +27,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Use Node.js 16 temporarily
+        node-version: '20' # Force Node.js 20 (optional if you want the explicit version)
     
     # Install npm dependencies (if required)
     - name: Install npm dependencies
